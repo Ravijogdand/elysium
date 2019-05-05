@@ -5,7 +5,14 @@ import { Component } from "@angular/core";
 })
 export class ContatComponent {
     public isShown: boolean = false;
+
+    public isravi: boolean = false;
+    public xyz = "manpj";
+    public foods: Array<string>
+
     public fruitList: Array<string>;
+
+
     public in = 0;
     public jobList: Array<{}>;
 
@@ -14,9 +21,12 @@ export class ContatComponent {
         this.jobList = [
             { name: 'Reach1to1', year: 2012, exp: 1 },
             { name: 'searchmayric', year: 2014, exp: 1.8 },
-
         ]
     }
+    myclick() {
+        this.isravi = !this.isravi;
+    }
+
     btnClick() {
         this.isShown = !this.isShown;
         this.in = this.in + 1;

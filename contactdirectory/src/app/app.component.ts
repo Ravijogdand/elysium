@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
+import { ContatComponent } from "./contact.component";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'contactdirectory';
+  @ViewChild('myconatct') contactInst: ContatComponent;
+  method1(){
+    this.contactInst.xyz="new baie"
+  }
 }
