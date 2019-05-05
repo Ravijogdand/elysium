@@ -1,0 +1,30 @@
+<h1> apna time ayega</h1>
+<h1>Structuraldirectve</h1>
+<button (click)="btnClick()">My button</button>
+<h1 *ngIf="isShown">This might get hidden</h1>
+<ng-template [ngIf]="isShown">
+    <h1>This might get hidden</h1>
+</ng-template>
+<ul>
+    <li *ngFor="let fruit of fruitList; index as i;trackBy:myfunc">{{i+1}} -- {{fruit}}</li>
+</ul>
+{{kuchBhi()}}
+<table border="1">
+    <ng-template ngFor let-job [ngForOf]="jobList" let-myindex="index" [ngForTrackBy]="myfunc2">
+        <tr>
+            <td>{{myindex}}</td>
+            <td>{{job.name}}</td>
+            <td>{{job.year}}</td>
+            <td>{{job.exp}}</td>
+            <td>{{job.expyears}}</td>
+        </tr>
+    </ng-template>
+</table>
+{{in}}
+<ul [ngSwitch]="in">
+        <!-- the same view can be shown in more than one case -->
+        <li *ngSwitchCase="0">Value is 0</li>
+        <li *ngSwitchCase="1">value is 1</li>
+        <!--default case when there are no matches -->
+        <li *ngSwitchDefault>Value is default</li>
+</ul>
